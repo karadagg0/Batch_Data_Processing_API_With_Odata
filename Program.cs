@@ -32,7 +32,7 @@ namespace Batch_Data_Processing_API_With_Odata
             {
                 opt.AddRouteComponents("api", GetEdmModel(), batchHandler);              
                 opt.EnableQueryFeatures();
-                //opt.Select().OrderBy().Filter();
+                //opt.Select().OrderBy().Filter().Expand().Count().SetMaxTop(100);
             });
             
             builder.Services.AddDbContext<UsersDbContext>((sp, conf) =>
