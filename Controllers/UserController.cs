@@ -21,7 +21,6 @@ namespace Batch_Data_Processing_API_With_Odata.Controllers
         public ActionResult GetUsers()
         {
             var result = _dbContext.USERS.Include(u => u.Orders).AsQueryable();
-
             return Ok(result);
         }
     }
